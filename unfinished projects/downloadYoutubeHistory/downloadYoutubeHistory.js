@@ -1,14 +1,38 @@
 var btn = document.createElement("BUTTON");
 btn.innerHTML = "Get history";
-btn.addEventListener("click", getHistory);
+btn.addEventListener("click", scrollToBottom);
 document.getElementById("header-container").appendChild(btn);
+lastHeight = 0;
 
-//virker ikke da queryselector all går til toppen igen
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function scrollToBottom() {
+    window.scrollTo(0,document.documentElement.scrollHeight);
+    setTimeout(function() {
+        if (document.documentElement.scrollHeight != lastHeight) {
+            lastHeight = document.documentElement.scrollHeight;
+            scrollToBottom();
+        } else {
+            getHistory();
+        }
+     }, 7500)
+}
+
 function getHistory() {
-    ytTitle = "";
-    while (ytTitle != ytTitles[ytTitles.length - 1].innerHTML) {
-        ytTitles = document.querySelectorAll('[id="video-title"]');
-        window.scrollTo(0,document.documentElement.scrollHeight);
-        ytTitle = ytTitles[ytTitles.length - 1].innerHTML;
-    }
+    ytTitles = document.querySelectorAll('a.yt-simple-endpoint.style-scope.ytd-video-renderer[id="video-title"]');
+    var jsonList = '{"WatchHistory":[]}';
+    ytTitles.forEach(function(item, index) {
+        var obj = JSON.parse(jsonList);
+        obj["WatchHistory"].push({"Title": (item.innerHTML).trim(), "Url": item.href});
+        jsonList = JSON.stringify(obj);
+    });
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(jsonList);
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", "WatchHistory.json");
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
 }
