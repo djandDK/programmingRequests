@@ -3,6 +3,9 @@ This repository contains all the scripts/programs i have made for people on [r/p
 
 # List of programs/scripts and what they do
 
+### danganronpa
+This is a website developed for [Bennie-Artist](https://www.reddit.com/r/programmingrequests/comments/e5jvup/html_css_request/ "Reddit post with request"), it displays a synopsis, info about who voiced what character and some screenshots.
+
 ### downloadYoutubeHistory
 This is a firefox plugin developed for [moonmeadow13](https://www.reddit.com/r/programmingrequests/comments/dla0ap/download_complete_youtube_history_paid/ "Reddit post with request"), it scrolls through your youtube history webpage, until it reaches the bottom and then saves every single video on the page with title, url and thumbnail url into a json file.
 
