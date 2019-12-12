@@ -1,0 +1,42 @@
+{
+    "Monday": {
+        "10:00": "Class at 10:00",
+        "12:00": "Class at 12:00",
+        "14:00": "Class at 14:00",
+        "16:00": "Class at 16:00",
+        "18:00": "Class at 18:00",
+        "20:00": "Class at 20:00"
+    },
+    "Tuesday": {
+        "10:14": "Class at 10:14",
+        "12:14": "Class at 12:14",
+        "14:14": "Class at 14:14",
+        "16:14": "Class at 16:14",
+        "18:14": "Class at 18:14",
+        "20:14": "Class at 20:14"
+    },
+    "Wednesday": {
+        "10:28": "Class at 10:28",
+        "12:28": "Class at 12:28",
+        "14:28": "Class at 14:28",
+        "16:28": "Class at 16:28",
+        "18:28": "Class at 18:28",
+        "20:28": "Class at 20:28"
+    },
+    "Thursday": {
+        "10:42": "Class at 10:42",
+        "12:42": "Class at 12:42",
+        "14:42": "Class at 14:42",
+        "16:42": "Class at 16:42",
+        "18:42": "Class at 18:42",
+        "20:42": "Class at 20:42"
+    },
+    "Friday": {
+        "10:56": "Class at 10:56",
+        "12:56": "Class at 12:56",
+        "14:56": "Class at 14:56",
+        "16:56": "Class at 16:56",
+        "18:56": "Class at 18:56",
+        "20:56": "Class at 20:56"
+    }
+}
