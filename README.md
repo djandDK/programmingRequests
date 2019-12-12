@@ -3,6 +3,9 @@ This repository contains all the scripts/programs i have made for people on [r/p
 
 # List of programs/scripts and what they do
 
+### bellScheduler
+This is a countdown timer developed for [CorruptPresident](https://www.reddit.com/r/programmingrequests/comments/e8zz9b/reward_bell_schedule_countdown/ "Reddit post with request"), it displays a countdown timer, which countsdown until the next class or event, then times and info is grabbed from a json file.
+
 ### danganronpa
 This is a website developed for [Bennie-Artist](https://www.reddit.com/r/programmingrequests/comments/e5jvup/html_css_request/ "Reddit post with request"), it displays a synopsis, info about who voiced what character and some screenshots.
 
