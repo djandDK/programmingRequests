@@ -16,7 +16,7 @@ if (Test-Path $path -PathType Leaf) {
                 $question = ($questionObject | Select-Object -ExpandProperty $numberLetter -ErrorAction Stop)
                 write-host "Question with id: $numberLetter"
                 write-host "`n"
-                write-host $question -BackgroundColor Green
+                write-host $question -BackgroundColor DarkGreen
             }
             catch {
                 Write-Warning "No question with the id you entered exists"
