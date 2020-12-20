@@ -26,4 +26,5 @@ if (Test-Path $path -PathType Leaf) {
     } while ($userInput.ToLower() -ne "exit")
 } else {
     Write-warning "The demo.txt file is missing"
+    $userInput = Read-Host -Prompt 'Press any key to exit'
 }

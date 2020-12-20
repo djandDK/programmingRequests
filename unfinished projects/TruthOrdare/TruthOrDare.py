@@ -30,7 +30,7 @@ if path.exists(filePath):
             inputMatchedString = inputRegexString.search(userInput)
             if inputMatchedString:
                 try:
-                    numberLetter = inputMatchedString.group("number") + inputMatchedString.group("letter")
+                    numberLetter = inputMatchedString.group("number") + inputMatchedString.group("letter").lower()
                     question = questiondict[numberLetter]
                     print("Question with id: " + numberLetter + "\n\n")
                     print(question + "\n\n")
@@ -40,3 +40,4 @@ if path.exists(filePath):
                 print("the id entered, isn't viable")
 else:
     print("The demo.txt file is missing")
+    userInput = input("Press any key to exit.")
